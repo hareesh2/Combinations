@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Combinations For a Given Number</title>
+<h1>Enter a Number</h1>
+</head>
+<body>
+<div id="COmbiationsDemo">
+<form id="CombinationsForm" action="/Output.html">
+Input Number: <input type=number id="myNumber" name="Number">
+<input type="button" value="Calculate Combinations" onclick="Combinations()">
+</form>
+</div>
+<script type=text/javascript>
+function Combination(str) {
+   alert(str);
+   
+   var fn=function(active,rest,a)
+   {
+	   if(!active && !rest)
+		   {
+		   return;
+		   
+		   }
+	   if(!rest)
+		   {
+		   a.push(active);
+		   }
+	   else
+		   {
+		   fn(active+rest[0],rest.s;ice(1),a);
+		   fn(active,rest.slice(1),a);
+		   }
+	   return a;
+	   
+		   }
+		return fn("",str,[]);
+   }
+</script>
+
+<script type=text/javascript>
+function Combinations() {
+    var x = document.getElementById("CombinationsForm");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        text += x.elements[i].value + "<br>";
+    }
+    var num=document.getElementById("myNumber").value;
+    var x = num.length;
+    alert(x);
+    Combination(x); 
+    document.getElementById("COmbiationsDemo").innerHTML = text;   
+}
+</script>
+</body>
+</html>

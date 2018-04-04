@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Combinations For a Given Number</title>
+<h1>Enter a Number</h1>
+</head>
+<body>
+
+<form id="CombinationsForm" action="/Output.html">
+Input Number: <input type=number name="Number">
+<input type="button" value="Calculate Combinations" onclick="Combinations()">
+</form>
+<script>
+function Combinations() {
+    var x = document.getElementById("CombinationsForm");
+    var text = "";
+    var i;
+    for (i = 0; i < x.length ;i++) {
+        text += x.elements[i].value + "<br>";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+</body>
+</html>
